@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru"  data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block pagetitle %}{% endblock %}</title>
+    <!-- load static -->
+    {% load static %}
+    <!-- CSS -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header data-bs-theme="dark">
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container">
+            <a href="/" class="navbar-brand d-flex align-items-center">
+                <strong>KEREMET</strong>
+            </a>
+          </div>
+        </div>
+      </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
