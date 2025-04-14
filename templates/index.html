@@ -26,14 +26,14 @@ KEREMET
             <div class="col">
                 <div class="card shadow-sm">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                        <image href="static/book.svg" width="32" height="32" x="34" y="34" preserveAspectRatio="xMidYMid meet"/>
+                        <image href="static/image/book.svg" width="32" height="32" x="34" y="34" preserveAspectRatio="xMidYMid meet"/>
                         <rect width="100%" height="100%" fill="#55595c" opacity="0.7"></rect>
                     </svg>
                     <div class="card-body">
                         <p class="card-text">Изучайте лексику</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button href="#" type="button" class="btn btn-md btn-outline-secondary">Начать</button>
+                                <button onclick="window.location.href='{% url 'study' %}'" type="button" class="btn btn-md btn-outline-secondary">Начать</button>
                             </div>
                         </div>
                     </div>
@@ -42,14 +42,14 @@ KEREMET
             <div class="col">
                 <div class="card shadow-sm">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                        <image href="static/plus.svg" width="20" height="20" x="40" y="40" preserveAspectRatio="xMidYMid meet"/>
+                        <image href="static/image/plus.svg" width="20" height="20" x="40" y="40" preserveAspectRatio="xMidYMid meet"/>
                         <rect width="100%" height="100%" fill="#55595c" opacity="0.7"></rect>
                     </svg>
                     <div class="card-body">
                         <p class="card-text">Добавляйте собственные слова в базу</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button href="#" type="button" class="btn btn-md btn-outline-secondary">Добавить</button>
+                                <button onclick="window.location.href='{% url 'contribute' %}'" type="button" class="btn btn-md btn-outline-secondary">Добавить</button>
                             </div>
                         </div>
                     </div>

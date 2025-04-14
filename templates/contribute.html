@@ -1,0 +1,43 @@
+{% extends "base_page.html" %}
+
+{% block pagetitle %}
+Добавить термин
+{% endblock %}
+
+{% block content %}
+<div class="container-sm px-4">
+    <form method="post">
+        <div class="row px-3 mb-2">
+            <h3>Введите термин</h3>
+        </div>
+        <div class="row px-3 py-2">
+            <div class="col-md-6 ms-2">
+                <label for="term" class="form-label fs-5 mb-2 d-block ">Термин:  </label>
+                {{ form.term }}
+                {% if form.term.errors %}
+                    <div class="alert alert-danger mt-2">
+                        {{ form.term.errors }}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-md-6 ms-2">
+                <label for="translation" class="form-label fs-5 mb-2 d-block">Перевод:  </label>
+                {{ form.translation }}
+                {% if form.translation.errors %}
+                    <div class="alert alert-danger mt-2">
+                        {{ form.translation.errors }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% if form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ form.non_field_errors }}
+        </div>
+        {% endif %}
+        <div class="row px-5 py-2">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

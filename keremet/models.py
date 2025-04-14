@@ -7,7 +7,7 @@ class Term(models.Model):
     term_id = models.UUIDField(primary_key = True, default = uuid4)
     term = models.TextField(unique = True)
     translation = models.TextField()
-    created_by = models.ForeignKey(get_user_model(), on_delete = models.DO_NOTHING)
+    created_by = models.ForeignKey(get_user_model(), on_delete = models.DO_NOTHING, null = True, blank = True)
     created_when = models.DateTimeField(auto_now_add = True)
 
     def __str__(self):
