@@ -1,0 +1,33 @@
+{% extends "base_page.html" %}
+
+{% block pagetitle %}
+Авторизация
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <h3 class="mb-4">Вход</h3>
+            {% if form.errors %}
+            <div class="alert alert-danger">Неверный логин или пароль</div>
+            {% endif %}
+            <form method="post" class="border p-4 rounded">
+                {% csrf_token %}
+                <div class="mb-2">
+                    <label for="id_username" class="form-label">Логин:</label>
+                    <input type="text" name="username" class="form-control" required id="id_username">
+                </div>
+                <div class="mb-2">
+                    <label for="id_password" class="form-label">Пароль:</label>
+                    <input type="password" name="password" class="form-control" required id="id_password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Войти</button>
+            </form>
+            <div class="mt-3 text-center">
+                <p>Если нет аккаунта, <a href="{% url 'register' %}">зарегестрируйтесь</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
